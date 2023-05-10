@@ -33,7 +33,6 @@ export async function OpenAIStream(payload: OpenAIStreamPayload) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Accept: "application/json",
       Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
     },
     body: JSON.stringify(payload),
@@ -41,6 +40,7 @@ export async function OpenAIStream(payload: OpenAIStreamPayload) {
 
   const stream = new ReadableStream({
     async start(controller) {
+      // Callback function
       function onParse(event: ParsedEvent | ReconnectInterval) {
         if (event.type === "event") {
           const data = event.data;
@@ -57,7 +57,7 @@ export async function OpenAIStream(payload: OpenAIStreamPayload) {
             const jsonData = JSON.parse(data);
             const text = jsonData.choices[0].delta?.content || "";
 
-            // If there is a newline character
+            // If there is a newline character (i.e., "\n\n"), do nothing
             if (counter < 2 && (text.match(/\n/) || []).length) {
               return;
             }
@@ -73,6 +73,8 @@ export async function OpenAIStream(payload: OpenAIStreamPayload) {
         }
       }
 
+      // Stream response (SSE) from OpenAI may be fragmented into multiple chunks
+      // This ensures we properly read chunks and invoke an event for each SSE event stream
       const parser = createParser(onParse);
 
       for await (const chunk of response.body as any) {

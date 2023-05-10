@@ -34,13 +34,19 @@ const Messages = ({ className, ...props }: MessagesProps) => {
               className={cn(
                 "flex flex-col text-sm space-y-2 max-w-xs overflow-x-hidden mx-2",
                 {
-                  // "bg-blue-600 text-white": message.isUserMessage,
-                  // "bg-gray-200 text-gray-900": !message.isUserMessage,
+                  "order-1 items-end": message.isUserMessage,
+                  "order-2 items-start": !message.isUserMessage,
                 }
               )}
             >
-              {/* <MarkdownLite text={message.text} /> */}
-              {message.text}
+              <p
+                className={cn("rounded-lg px-4 py-2", {
+                  "bg-blue-600 text-white": message.isUserMessage,
+                  "bg-gray-200 text-gray-900": !message.isUserMessage,
+                })}
+              >
+                <MarkdownLite text={message.text} />
+              </p>
             </div>
           </div>
         </div>

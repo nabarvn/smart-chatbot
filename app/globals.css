@@ -17,6 +17,12 @@
 }
 
 body {
+  position: fixed;
+  overflow: hidden;
+  height: 100svh;
+  padding: 0;
+  margin: 0;
+  width: 100%;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,4 +30,25 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.scrollbar-w-2::-webkit-scrollbar {
+  height: 0.25rem;
+  width: 0.25rem;
+}
+
+.scrollbar-track-blue-lighter::-webkit-scrollbar-track {
+  --bg-opacity: 1;
+  background-color: "#F7FAFC";
+  background-color: rgba(247, 250, 253, var(--bg-opacity));
+}
+
+.scrollbar-thumb-blue::-webkit-scrollbar-thumb {
+  --bg-opacity: 0.3;
+  background-color: rgb(10, 102, 194);
+  background-color: rgba(10, 102, 194, var(--bg-opacity));
+}
+
+.scrollbar-thumb-rounded::-webkit-scrollbar-thumb {
+  border-radius: 0.25rem;
 }
