@@ -43,7 +43,7 @@ export async function OpenAIStream(payload: OpenAIStreamPayload) {
       // Callback function
       function onParse(event: ParsedEvent | ReconnectInterval) {
         if (event.type === "event") {
-          const data = event.data;
+          const { data } = event;
 
           if (data === "[DONE]") {
             // Closing the readable stream
