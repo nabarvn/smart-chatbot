@@ -1,34 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Smart Chatbot
 
-## Getting Started
+An incredibly smart chatbot to provide customer assistance, engage the visitors, and make the overall experience really intuitive.
 
-First, run the development server:
 
+
+## Screenshot
+
+<img src="./screenshot.png">
+
+<p align="center">
+  <a href="https://bot.nabarun.ai"><strong>View Project »</strong></a>
+</p>
+
+
+
+## Running Locally
+
+This application requires Node.js v16.13+.
+
+### Cloning the repository to the local machine:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+git clone https://github.com/nabarvn/smart-chatbot.git
+cd smart-chatbot
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installing the dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Running the application:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Language**: [TypeScript](https://www.typescriptlang.org)
+- **Framework**: [Next.js](https://nextjs.org)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com)
+- **Analytics**: [Vercel Analytics](https://vercel.com/analytics)
+- **State Management**: [React Query](https://www.npmjs.com/package/@tanstack/react-query)
+- **API**: [OpenAI](https://platform.openai.com/docs/introduction)
+- **Rate Limiter**: [Upstash](https://docs.upstash.com/redis)
+- **Deployment**: [Vercel](https://vercel.com)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Credits
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Learned a ton while building this project. All thanks to Josh for the next level (no pun intended) tutorial!
+
+<hr />
+
+<div align="center">Don't forget to leave a STAR 🌟</div>
