@@ -1,10 +1,11 @@
+import { MessageArraySchema } from "@/lib/validators/message";
 import { chatbotPrompt } from "@/app/helpers/constants/chatbot-prompt";
+
 import {
   GPTMessage,
   OpenAIStream,
   OpenAIStreamPayload,
 } from "@/lib/openai-stream";
-import { MessageArraySchema } from "@/lib/validators/message";
 
 export const runtime = "edge";
 
@@ -24,7 +25,7 @@ export async function POST(req: Request) {
   });
 
   const payload: OpenAIStreamPayload = {
-    model: "gpt-3.5-turbo",
+    model: "gpt-4o",
     messages: outboundMessages,
     temperature: 0.4,
     top_p: 1,
