@@ -2,8 +2,6 @@
 
 An incredibly smart chatbot to provide customer assistance, engage the visitors, and make the overall experience really intuitive.
 
-
-
 ## Screenshot
 
 <img src="./screenshot.png">
@@ -12,31 +10,39 @@ An incredibly smart chatbot to provide customer assistance, engage the visitors,
   <a href="https://bot.nabarun.ai"><strong>View Project »</strong></a>
 </p>
 
-
-
 ## Running Locally
 
 This application requires Node.js v16.13+.
 
 ### Cloning the repository to the local machine:
+
 ```bash
 git clone https://github.com/nabarvn/smart-chatbot.git
 cd smart-chatbot
 ```
 
 ### Installing the dependencies:
+
 ```bash
 npm install
 ```
 
+### Setting up the `.env` file:
+
+```bash
+cp .env.example .env
+```
+
+> [!IMPORTANT]
+> Ensure you populate the variables with your respective API keys and configuration values before proceeding.
+
 ### Running the application:
+
 ```bash
 npm run dev
 ```
 
-
-
-## Tech Stack:
+## Tech Stack
 
 - **Language**: [TypeScript](https://www.typescriptlang.org)
 - **Framework**: [Next.js](https://nextjs.org)
@@ -46,8 +52,6 @@ npm run dev
 - **API**: [OpenAI](https://platform.openai.com/docs/introduction)
 - **Rate Limiter**: [Upstash](https://docs.upstash.com/redis)
 - **Deployment**: [Vercel](https://vercel.com)
-
-
 
 ## Credits
 
