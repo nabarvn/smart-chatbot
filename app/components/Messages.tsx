@@ -1,9 +1,9 @@
 "use client";
 
-import { MessagesContext } from "@/context/messages";
 import { cn } from "@/lib/utils";
-import { HTMLAttributes, useContext } from "react";
 import MarkdownLite from "./MarkdownLite";
+import { HTMLAttributes, useContext } from "react";
+import { MessagesContext } from "@/context/messages";
 
 interface MessagesProps extends HTMLAttributes<HTMLDivElement> {}
 
@@ -21,10 +21,10 @@ const Messages = ({ className, ...props }: MessagesProps) => {
         className
       )}
     >
-      <div className='flex-1 flex-grow' />
+      <div className="flex-1 flex-grow" />
 
       {inverseMessages.map((message) => (
-        <div key={message.id} className='chat-message'>
+        <div key={message.id} className="chat-message">
           <div
             className={cn("flex items-end", {
               "justify-end": message.isUserMessage,
@@ -32,7 +32,7 @@ const Messages = ({ className, ...props }: MessagesProps) => {
           >
             <div
               className={cn(
-                "flex flex-col text-sm space-y-2 max-w-xs overflow-x-hidden mx-2",
+                "flex flex-col text-sm space-y-2 max-w-[80%] overflow-x-hidden mx-2",
                 {
                   "order-1 items-end": message.isUserMessage,
                   "order-2 items-start": !message.isUserMessage,
