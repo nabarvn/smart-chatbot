@@ -7,7 +7,7 @@ An incredibly smart chatbot to provide customer assistance, engage the visitors,
 <img src="./screenshot.png">
 
 <p align="center">
-  <a href="https://bot.nabarun.ai"><strong>View Project »</strong></a>
+  <a href="https://bot.nabarun.app"><strong>View Project »</strong></a>
 </p>
 
 ## Running Locally
